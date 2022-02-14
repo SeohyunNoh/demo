@@ -38,7 +38,7 @@ public class ProductRepository {
 
                         product.setBoardNo(rs.getInt("board_no"));
                         product.setProdName(rs.getString("prodName"));
-                        product.setProdName(rs.getString("prodPrice"));
+                        product.setProdPrice(rs.getInt("prodPrice"));
 
                         SimpleDateFormat printDate = new SimpleDateFormat("yyyy-MM-dd");
                         String dbDate = rs.getDate("reg_date") + " ";
@@ -65,7 +65,7 @@ public class ProductRepository {
 
                         product.setBoardNo(rs.getInt("board_no"));
                         product.setProdName(rs.getString("prodName"));
-                        product.setProdName(rs.getString("prodPrice"));
+                        product.setProdPrice(rs.getInt("prodPrice"));
 
                         SimpleDateFormat printDate = new SimpleDateFormat("yyyy-MM-dd");
                         String dbDate = rs.getDate("reg_date") + " ";
@@ -90,5 +90,6 @@ public class ProductRepository {
 
         jdbcTemplate.update(query, product.getProdName(), product.getProdPrice(), product.getBoardNo());
     }
+
 
 }
